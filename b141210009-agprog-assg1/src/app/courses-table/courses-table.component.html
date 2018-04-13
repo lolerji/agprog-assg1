@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Ders Programi</mat-card-title>
+    <mat-card-content>
+        <mat-table [dataSource]="courses">
+            <ng-container matColumnDef="no">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Sira No</mat-header-cell>
+                <mat-cell *matCellDef="let course">{{ course.no }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="code">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Ders Kodu</mat-header-cell>
+                <mat-cell *matCellDef="let course">{{ course.code }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Ders Adi</mat-header-cell>
+                <mat-cell *matCellDef="let course">{{ course.name }}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+            <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
+        </mat-table>
+    </mat-card-content>
+</mat-card>

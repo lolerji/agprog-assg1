@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 12;
+    align-items: flex-start;
+}
+
+.container .end {
+    justify-content: flex-end;
+}
+
+.box {
+    width: 10em;
+    height: 3em;
+    margin: auto;
+}
